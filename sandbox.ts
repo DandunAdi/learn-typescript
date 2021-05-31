@@ -1,20 +1,12 @@
-let username: string;
-let age: number;
-let isLoggedIn: boolean;
-isLoggedIn = true;
-let uid: string | number;
-uid = "oewioijxknkogjdf";
-uid = 97;
+let mysteryBox: any;
+mysteryBox = "Cat";
+mysteryBox = false;
+mysteryBox = null;
 
-let myFriends: string[] = [];
-myFriends.push("Ddd");
+let mysteryStuff: any[];
+mysteryStuff.push("Shoes");
+mysteryStuff.push(true);
+mysteryStuff.push(90);
 
-let myStuff: (string | number)[] = [];
-myStuff.push("Clothes");
-myStuff.push(420);
-
-let myThing: object;
-myThing = { title: "Atlas", pages: 40 };
-
-let myBook: { title: string; pages: number; isReading: boolean };
-myBook = { title: "Tidying Up", pages: 128, isReading: false };
+let mysteryItem: { name: any; count: any };
+mysteryItem = { name: true, count: "maybe one" };
