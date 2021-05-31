@@ -1,7 +1,10 @@
-var character = "Luigi";
-console.log(character);
-var inputs = document.querySelectorAll("input");
-console.log(inputs);
-inputs.forEach(function (input) {
-    console.log(input);
-});
+var myName = "Mario";
+myName = "Luigi";
+var myAge = 30;
+myAge = 20;
+var isEating = false;
+isEating = true;
+var circ = function (diameter) {
+    return diameter * Math.PI;
+};
+console.log(circ(21));

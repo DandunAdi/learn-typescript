@@ -1,9 +1,14 @@
-const character = "Luigi";
-console.log(character);
+let myName = "Mario";
+myName = "Luigi";
 
-const inputs = document.querySelectorAll("input");
-console.log(inputs);
+let myAge = 30;
+myAge = 20;
 
-inputs.forEach((input) => {
-  console.log(input);
-});
+let isEating = false;
+isEating = true;
+
+const circ = (diameter: number) => {
+  return diameter * Math.PI;
+};
+
+console.log(circ(21));
