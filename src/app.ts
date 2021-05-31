@@ -11,6 +11,27 @@ invoices.forEach((invoice) => {
   console.log(invoice.format());
 });
 
+interface IsPerson {
+  name: string;
+  age: number;
+  speak(a: string): void;
+}
+
+const me: IsPerson = {
+  name: "DDD",
+  age: 24,
+  speak(text: string): void {
+    console.log("Bla bla bla " + text);
+  },
+};
+
+const greeting = (someone: IsPerson) => {
+  someone.speak("I am Batman");
+  console.log(`${someone.name} says hello`);
+};
+
+greeting(me);
+
 const form = document.querySelector(".new-item-form") as HTMLFormElement;
 
 const type = document.querySelector("#type") as HTMLSelectElement;

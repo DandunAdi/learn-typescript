@@ -7,6 +7,18 @@ invoices.push(invTwo);
 invoices.forEach((invoice) => {
     console.log(invoice.format());
 });
+const me = {
+    name: "DDD",
+    age: 24,
+    speak(text) {
+        console.log("Bla bla bla " + text);
+    },
+};
+const greeting = (someone) => {
+    someone.speak("I am Batman");
+    console.log(`${someone.name} says hello`);
+};
+greeting(me);
 const form = document.querySelector(".new-item-form");
 const type = document.querySelector("#type");
 const toFrom = document.querySelector("#tofrom");
