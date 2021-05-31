@@ -1,14 +1,15 @@
-let myName = "Mario";
-myName = "Luigi";
+const students = ["mario", "luigi", "yoshi"];
+students.push("bowser");
+// students[3] = 30;
 
-let myAge = 30;
-myAge = 20;
+const myStuff = ["Racquet", 2, "Shoes", 1];
+myStuff.push("Phone");
+myStuff[0] = 69;
 
-let isEating = false;
-isEating = true;
-
-const circ = (diameter: number) => {
-  return diameter * Math.PI;
+const myRacquet = {
+  name: "Lining ss2020",
+  tension: 28,
+  isBroken: false,
 };
-
-console.log(circ(21));
+// myRacquet.isBroken = "maybe";
+myRacquet.isBroken = true;
