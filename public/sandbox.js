@@ -1,14 +1,10 @@
 "use strict";
-var greet = function () {
-    console.log("Hello");
+var logDetails = function (uid, item) {
+    console.log(item + " has id of " + uid);
 };
-var add = function (a, b, c) {
-    if (c === void 0) { c = 10; }
-    console.log(a + b);
-    console.log("C is: " + c);
+var greet = function (user) {
+    console.log(user.name + " says hello");
 };
-add(1, 2);
-var substract = function (a, b) {
-    return a - b;
+var greetAgain = function (user) {
+    console.log(user.name + " says hi!");
 };
-console.log(substract(10, 15));

@@ -1,14 +1,14 @@
-const greet = () => {
-  console.log("Hello");
+type strOrNum = string | number;
+type objWithName = { name: string; uid: strOrNum };
+
+const logDetails = (uid: strOrNum, item: string): void => {
+  console.log(`${item} has id of ${uid}`);
 };
 
-const add = (a: number, b: number, c: number | string = 10): void => {
-  console.log(a + b);
-  console.log("C is: " + c);
+const greet = (user: objWithName): void => {
+  console.log(`${user.name} says hello`);
 };
-add(1, 2);
 
-const substract = (a: number, b: number): number => {
-  return a - b;
+const greetAgain = (user: objWithName): void => {
+  console.log(`${user.name} says hi!`);
 };
-console.log(substract(10, 15));
