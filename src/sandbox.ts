@@ -1,14 +1,20 @@
-type strOrNum = string | number;
-type objWithName = { name: string; uid: strOrNum };
-
-const logDetails = (uid: strOrNum, item: string): void => {
-  console.log(`${item} has id of ${uid}`);
+let greet: (a: string, b: string) => void;
+greet = (name: string, greeting: string): void => {
+  console.log(`${name} says ${greeting}`);
 };
 
-const greet = (user: objWithName): void => {
-  console.log(`${user.name} says hello`);
+let calc: (a: number, b: number, c: string) => number;
+calc = (x: number, y: number, operator: string): number => {
+  if (operator === "+") {
+    return x + y;
+  } else {
+    return x - y;
+  }
 };
 
-const greetAgain = (user: objWithName): void => {
-  console.log(`${user.name} says hi!`);
+let showInfo: (obj: { name: string; age: number }) => void;
+
+type Person = { name: string; age: number };
+showInfo = (person: Person) => {
+  console.log(`${person.name} is ${person.age} years old.`);
 };
