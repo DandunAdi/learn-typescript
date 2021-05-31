@@ -1,15 +1,20 @@
-const students = ["mario", "luigi", "yoshi"];
-students.push("bowser");
-// students[3] = 30;
+let username: string;
+let age: number;
+let isLoggedIn: boolean;
+isLoggedIn = true;
+let uid: string | number;
+uid = "oewioijxknkogjdf";
+uid = 97;
 
-const myStuff = ["Racquet", 2, "Shoes", 1];
-myStuff.push("Phone");
-myStuff[0] = 69;
+let myFriends: string[] = [];
+myFriends.push("Ddd");
 
-const myRacquet = {
-  name: "Lining ss2020",
-  tension: 28,
-  isBroken: false,
-};
-// myRacquet.isBroken = "maybe";
-myRacquet.isBroken = true;
+let myStuff: (string | number)[] = [];
+myStuff.push("Clothes");
+myStuff.push(420);
+
+let myThing: object;
+myThing = { title: "Atlas", pages: 40 };
+
+let myBook: { title: string; pages: number; isReading: boolean };
+myBook = { title: "Tidying Up", pages: 128, isReading: false };

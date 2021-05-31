@@ -1,13 +1,16 @@
-var students = ["mario", "luigi", "yoshi"];
-students.push("bowser");
-// students[3] = 30;
-var myStuff = ["Racquet", 2, "Shoes", 1];
-myStuff.push("Phone");
-myStuff[0] = 69;
-var myRacquet = {
-    name: "Lining ss2020",
-    tension: 28,
-    isBroken: false
-};
-// myRacquet.isBroken = "maybe";
-myRacquet.isBroken = true;
+var username;
+var age;
+var isLoggedIn;
+isLoggedIn = true;
+var uid;
+uid = "oewioijxknkogjdf";
+uid = 97;
+var myFriends = [];
+myFriends.push("Ddd");
+var myStuff = [];
+myStuff.push("Clothes");
+myStuff.push(420);
+var myThing;
+myThing = { title: "Atlas", pages: 40 };
+var myBook;
+myBook = { title: "Tidying Up", pages: 128, isReading: false };
