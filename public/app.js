@@ -1,5 +1,8 @@
 import { Invoice } from "./classes/Invoice.js";
 import { Payment } from "./classes/Payment.js";
+import { ListTemplate } from "./classes/ListTemplate.js";
+const ul = document.querySelector("ul");
+const ulTemplate = new ListTemplate(ul);
 const form = document.querySelector(".new-item-form");
 const type = document.querySelector("#type");
 const toFrom = document.querySelector("#tofrom");
@@ -14,5 +17,5 @@ form.addEventListener("submit", (e) => {
     else {
         doc = new Payment(toFrom.value, details.value, amount.valueAsNumber);
     }
-    console.log(doc);
+    ulTemplate.render(doc, type.value, "end");
 });
