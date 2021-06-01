@@ -1,36 +1,6 @@
 import { Invoice } from "./classes/Invoice.js";
-
-const invOne = new Invoice("Mario", "Create blog", 400);
-const invTwo = new Invoice("Luigi", "Create portfolio", 200);
-
-const invoices: Invoice[] = [];
-invoices.push(invOne);
-invoices.push(invTwo);
-
-invoices.forEach((invoice) => {
-  console.log(invoice.format());
-});
-
-interface IsPerson {
-  name: string;
-  age: number;
-  speak(a: string): void;
-}
-
-const me: IsPerson = {
-  name: "DDD",
-  age: 24,
-  speak(text: string): void {
-    console.log("Bla bla bla " + text);
-  },
-};
-
-const greeting = (someone: IsPerson) => {
-  someone.speak("I am Batman");
-  console.log(`${someone.name} says hello`);
-};
-
-greeting(me);
+import { Payment } from "./classes/Payment.js";
+import { HasFormatter } from "./interfaces/HasFormatter.js";
 
 const form = document.querySelector(".new-item-form") as HTMLFormElement;
 
@@ -42,5 +12,13 @@ const amount = document.querySelector("#amount") as HTMLInputElement;
 form.addEventListener("submit", (e: Event) => {
   e.preventDefault();
 
-  console.log(type.value, toFrom.value, details.value, amount.valueAsNumber);
+  let doc: HasFormatter;
+
+  if (type.value === "invoice") {
+    doc = new Invoice(toFrom.value, details.value, amount.valueAsNumber);
+  } else {
+    doc = new Payment(toFrom.value, details.value, amount.valueAsNumber);
+  }
+
+  console.log(doc);
 });
